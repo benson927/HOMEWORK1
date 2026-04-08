@@ -30,6 +30,23 @@ export const HomeView: React.FC<HomeViewProps> = ({ onStockClick }) => {
       animate={{ opacity: 1, y: 0 }}
       className="max-w-7xl mx-auto px-6 pt-8 pb-32 space-y-12"
     >
+      {/* Promo Video Section */}
+      <section className="mb-8">
+        <div className="rounded-3xl overflow-hidden border border-outline-variant/20 shadow-2xl bg-black relative">
+          <video 
+            src={`${import.meta.env.BASE_URL}video.mp4`} 
+            autoPlay 
+            muted 
+            loop 
+            controls 
+            className="w-full aspect-video object-cover"
+          ></video>
+          <div className="absolute top-4 left-4 bg-primary/80 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-bold z-10 hidden md:block">
+            今日市場快報
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section>
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
